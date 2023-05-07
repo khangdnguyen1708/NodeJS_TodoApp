@@ -1,11 +1,12 @@
 import React from 'react';
+import Item from './Item';
 
-function List() {
-    const itemList = ["Get Milk", "Buy Amazon", "Take over the world"];
+function List(props) {
+    const { itemList } = props;
 
     return (
         itemList.map((item) => (
-            <p>{item}</p>
+            <Item item={item} />
         ))
     );
 }
